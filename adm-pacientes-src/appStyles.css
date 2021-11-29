@@ -1,0 +1,238 @@
+:root {
+	--c-danger: hsl(348, 83%, 47%);
+	--c-danger-d: hsl(348, 83%, 35%);
+	--c-success: hsl(181, 49%, 43%);
+	--c-success-d: hsl(181, 49%, 35%);
+	--border: 1px solid cyan;
+	--transition: all 300ms;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	box-sizing: border-box;
+	min-height: 100vh;
+	color: whitesmoke;
+	background: #cc2b5e; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#753a88,
+		#cc2b5e
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#753a88,
+		#cc2b5e
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text-error {
+	position: absolute;
+	bottom: -0.5rem;
+	left: 20%;
+	color: var(--c-danger);
+	font-size: 1.2rem;
+	padding-bottom: 1rem;
+}
+.text-bold {
+	font-weight: bold;
+}
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+.ml-md {
+	margin-left: 2.5rem;
+}
+.heading {
+	text-align: center;
+	margin: 1rem 0;
+}
+.heading-1 {
+	margin: 3rem 0;
+	font-size: 4rem;
+}
+.heading-2 {
+	font-size: 3rem;
+}
+
+.container {
+	width: 85%;
+	min-width: 32rem;
+	margin: 5rem auto;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.row--gutters {
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+}
+.row--gutters .col {
+	padding: 1.5rem;
+}
+.col {
+	flex: 1;
+	min-width: 45rem;
+}
+
+.appointments {
+	background-color: whitesmoke;
+	color: #333;
+	border-radius: 0.5rem;
+	box-shadow: 0 1rem 1.2rem -0.2rem rgba(0, 0, 0, 0.4);
+	padding: 2.5rem;
+	transition: all 300ms;
+}
+
+.form {
+	margin-top: 2rem;
+}
+.form__label {
+	display: inline-block;
+	font-size: 1.6rem;
+	font-weight: bold;
+	width: 20%;
+	min-width: 20%;
+}
+.form__group {
+	padding-bottom: 2.3rem;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.form__control {
+	display: inline-block;
+	height: 3.6rem;
+	width: 80%;
+	border: 2px solid lightgray;
+	padding: 0.8rem;
+	outline: none;
+	transition: var(--transition);
+}
+.form__control:focus {
+	border: 2px solid hsl(0, 0%, 50%);
+}
+.form__control--textarea {
+	min-height: 6rem;
+	min-width: 80%;
+	max-width: 80%;
+}
+.form__control--invalid {
+	border: 2px solid var(--c-danger) !important;
+}
+
+.btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	padding: 1rem 1.5rem;
+	transition: var(--transition);
+}
+.btn__success {
+	background-color: #38a3a5;
+	color: #fff;
+	border-bottom: 0.7rem solid var(--c-success-d);
+}
+.btn__success:active {
+	background-color: var(--c-success-d);
+}
+.btn__danger {
+	background-color: var(--c-danger);
+	color: #fff;
+	border-bottom: 0.7rem solid var(--c-danger-d);
+}
+.btn__danger:active {
+	background-color: var(--c-danger-d);
+}
+.btn__add {
+	margin-left: auto;
+}
+.btn__date {
+	margin-top: 2rem;
+}
+
+.date {
+	margin: 2.5rem 0;
+	border-radius: 0.5rem;
+	padding: 2rem;
+	border: 1px solid lightgray;
+	transition: var(--transition);
+}
+.date:hover {
+	border: 1px solid hsl(0, 0%, 75%);
+}
+.date__title {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+}
+.date__property {
+	font-size: 1.5rem;
+}
+.modal {
+	overflow: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 41.5rem;
+	height: 32rem;
+	background-color: whitesmoke;
+	transform: translate(-50%, -50%);
+	border-radius: 1rem;
+	box-shadow: 0 0 2rem 0.3rem rgba(0, 0, 0, 0.5);
+	color: #333;
+	text-align: center;
+	z-index: 300;
+}
+.modal__header {
+	background-color: var(--c-success);
+	height: 15rem;
+}
+.modal__heading {
+	font-size: 3rem;
+	text-transform: capitalize;
+	padding: 3rem;
+}
+.modal__text {
+	font-size: 2rem;
+}
+@media only screen and (min-width: 93.75em) {
+	.container {
+		width: 75%;
+	}
+}
+@media only screen and (max-width: 48em) {
+	.col {
+		min-width: 32rem;
+	}
+}
+@media only screen and (max-width: 37.5em) {
+	.form__group {
+		display: flex;
+		justify-content: center;
+		align-items: unset;
+		flex-direction: column;
+	}
+	.form__label {
+		min-width: 100%;
+		margin: 1rem 0;
+	}
+	.form__control {
+		width: 100%;
+	}
+}
