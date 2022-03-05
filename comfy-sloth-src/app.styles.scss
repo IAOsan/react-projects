@@ -1,0 +1,21 @@
+// abstracts
+@import './sass/abstracts/variables.scss';
+@import './sass/abstracts/mixins.scss';
+// base
+@import './sass/base/base.scss';
+@import './sass/base/typography.scss';
+@import './sass/base/utils.scss';
+@import './sass/base/animations.scss';
+// layout
+@import './sass/layout/layout.scss';
+// components
+@import './sass/components/buttons.scss';
+@import './sass/components/components.scss';
+// pages
+
+// color contrast checker
+// :where pseudo class not add specificity, :is add specififity
+//
+
+// TODO reescribir el codigo
+// TODO agregar aria-selected true a botones

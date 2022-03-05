@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+:root {
+	--c-primary-200: #eddcca;
+	--c-primary-300: #c9b29c;
+	--c-primary-400: #947c6b;
+	--c-primary-500: #4e3b31;
+	--c-primary-700: #381f18;
+
+	--c-success-500: #4daa1e;
+
+	--c-info-50: #ecf7ff;
+	--c-info-500: #448ef6;
+
+	--c-warning-500: #daa520;
+	--c-warning-600: #bb8717;
+	--c-warning-700: #9c6c10;
+
+	--c-danger-400: #d56a44;
+	--c-danger-500: #ba3112;
+	--c-danger-600: #9f1d0d;
+
+	--c-dark-300: #c1c1c1;
+	--c-dark-400: #848484;
+	--c-dark-500: #333;
+	--c-dark-600: #2b2525;
+
+	--c-light-200: #fafafa;
+	--c-light-500: #f5f5f5;
+
+	// utils
+	--border: 1px solid magenta;
+	--transition: 300ms;
+	--transition-s: 500ms;
+	--boxshadow-regular: 0px 8px 8px -2px rgba(0, 0, 0, 0.15);
+	// type scale
+	--text-scale-ratio: 1.2;
+	--text-base-size: 62.5%; //10px
+	--text-size: 2rem;
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+	--text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+	--text-md: calc(
+		var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
+	);
+	--text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+	--text-xs: calc(
+		(var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio)
+	);
+	--lineheight-md: 2;
+	--lineheight-normal: 1.6;
+	--lineheight-small: 1.2;
+	--body-font: 'Raleway', sans-serif;
+	--heading-font: 'Open Sans', sans-serif;
+	// space
+	--space-xxs: 0.8rem;
+	--space-xs: 1.2rem;
+	--space-sm: 1.6rem;
+	--space-md: 1.8rem;
+	--space-lg: 2.4rem;
+	--space-xl: 3.2rem;
+}

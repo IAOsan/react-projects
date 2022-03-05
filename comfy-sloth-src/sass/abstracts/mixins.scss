@@ -1,0 +1,16 @@
+// mixins
+@mixin respond($breakpoint, $type: 'min-width') {
+	@if ($type == 'down') {
+		$type: 'max-width';
+	}
+	@media only screen and (#{$type}: #{$breakpoint / 16}em) {
+		@content;
+	}
+}
+// placeholders
+%center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

@@ -1,0 +1,110 @@
+.btn {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.8rem 1.8rem;
+	text-align: center;
+	border-radius: 0.4rem;
+	line-height: var(--lineheight-small);
+	transition: background-color var(--transition);
+	&:disabled {
+		opacity: 0.5;
+		cursor: auto;
+	}
+	&--warning {
+		background-color: var(--c-warning-600);
+		color: var(--c-light-500);
+		&:hover {
+			background-color: var(--c-warning-500);
+		}
+		&:active {
+			background-color: var(--c-warning-700);
+		}
+	}
+	&--danger {
+		background-color: var(--c-danger-500);
+		color: var(--c-light-500);
+		&:hover {
+			background-color: var(--c-danger-400);
+		}
+		&:active {
+			background-color: var(--c-danger-600);
+		}
+	}
+	&--dark {
+		background-color: var(--c-dark-500);
+		color: var(--c-light-500);
+		&:hover {
+			background-color: var(--c-dark-400);
+		}
+		&:active {
+			background-color: var(--c-dark-600);
+		}
+	}
+	&--block {
+		display: block;
+		width: 100%;
+	}
+	&--text {
+		background-color: transparent;
+	}
+	&--filter {
+		&-text {
+			background-color: transparent;
+			padding: 0.4rem 0;
+			border-bottom: 0.2rem solid transparent;
+			&.active {
+				border-bottom: 0.2rem solid var(--c-dark-500);
+			}
+		}
+		&-color {
+			--bg-color: var(--c-dark-400);
+			background-color: var(--bg-color);
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			padding: 0;
+			&-xl {
+				width: 3.2rem;
+				height: 3.2rem;
+			}
+			&.active {
+				outline: var(--bg-color) 0.2rem solid;
+				border: 0.2rem solid var(--c-light-200);
+				color: var(--c-light-200);
+				position: relative;
+				&::before {
+					content: '\2714';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					font-size: 90%;
+				}
+			}
+		}
+	}
+	&--view {
+		border: 0.1rem solid var(--c-dark-500);
+		padding: 0;
+		height: 2.8rem;
+		width: 2.8rem;
+		transition: background-Color var(--transition), color var(--transition);
+		&.active {
+			background-color: var(--c-dark-500);
+			color: var(--c-light-500);
+		}
+		.icon {
+			margin: 0;
+		}
+	}
+	&--lg {
+		font-size: 2.4rem;
+		padding: 1rem 2.2rem;
+	}
+	&--xl {
+		font-size: 2.8rem;
+		padding: 1.2rem 2.6rem;
+	}
+}

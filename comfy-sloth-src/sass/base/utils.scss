@@ -1,0 +1,164 @@
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+/* weights & size */
+.font {
+	&-weight-regular {
+		font-weight: 400 !important;
+	}
+	&-bold {
+		font-weight: 700;
+	}
+	&-xbold {
+		font-weight: 800;
+	}
+	&-xxxl {
+		font-size: var(--text-xxxl);
+	}
+	&-xl {
+		font-size: var(--text-xl);
+	}
+	&-lg {
+		font-size: var(--text-lg);
+	}
+	&-md {
+		font-size: var(--text-md);
+	}
+	&-sm {
+		font-size: var(--text-sm) !important;
+	}
+}
+/* color & alignment */
+.text {
+	&-center {
+		text-align: center;
+	}
+	&-capitalize {
+		text-transform: capitalize;
+	}
+	&-primary {
+		color: var(--c-primary-500);
+	}
+	&-warning {
+		color: var(--c-warning-600);
+		&-700 {
+			color: var(--c-warning-700);
+		}
+	}
+	&-danger {
+		color: var(--c-danger-500);
+	}
+	&-muted {
+		color: var(--c-dark-400);
+	}
+}
+.lineheight {
+	&-md {
+		line-height: var(--lineheight-md);
+	}
+}
+.pos {
+	&-rel {
+		position: relative;
+	}
+	&-abs {
+		position: absolute;
+	}
+	&-centered {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&-center-y {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	&-right {
+		right: 0;
+	}
+}
+.d {
+	&-flex {
+		display: flex;
+		&-ai {
+			&-c {
+				align-items: center;
+			}
+		}
+		&-jc {
+			&-c {
+				justify-content: center;
+			}
+			&-sb {
+				justify-content: space-between;
+			}
+		}
+	}
+	&-inline-block {
+		display: inline-block;
+	}
+	&-block {
+		display: block !important;
+	}
+	@include respond(767, down) {
+		&-mobile-sm-none {
+			display: none !important;
+		}
+	}
+	@include respond(991, down) {
+		&-mobile-none {
+			display: none;
+		}
+	}
+	@include respond(992) {
+		&-desktop-none {
+			display: none !important;
+		}
+	}
+}
+.m {
+	&y-sm {
+		margin: var(--space-sm) 0;
+	}
+	&y-lg {
+		margin: var(--space-lg) 0;
+	}
+	&b-xl {
+		margin-bottom: var(--space-xl);
+	}
+	&b-sm {
+		margin-bottom: var(--space-sm);
+	}
+	&b-xxs {
+		margin-bottom: var(--space-xxs);
+	}
+	&t-xl {
+		margin-top: var(--space-xl);
+	}
+	&t-lg {
+		margin-top: var(--space-lg);
+	}
+	&r-xxs {
+		margin-right: var(--space-xxs);
+	}
+	&r-xs {
+		margin-right: var(--space-xs) !important;
+	}
+	&l-xs {
+		margin-left: var(--space-xs);
+	}
+}
+.height {
+	&-100 {
+		height: 100%;
+	}
+}

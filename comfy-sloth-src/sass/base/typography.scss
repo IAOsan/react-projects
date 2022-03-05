@@ -1,0 +1,35 @@
+.heading {
+	&-1 {
+		font-size: var(--text-xxxl);
+	}
+	&-2 {
+		font-size: var(--text-xxl);
+	}
+	&-3 {
+		font-size: var(--text-xl);
+	}
+	&-4 {
+		font-size: var(--text-md);
+	}
+	&--underline {
+		position: relative;
+		&::after {
+			content: '';
+			display: block;
+			margin: 1.2rem 0;
+			height: 0.4rem;
+			width: 10rem;
+			background-color: var(--c-warning-600);
+		}
+		&-center {
+			&::after {
+				content: '';
+				display: block;
+				margin: 1.2rem auto;
+				height: 0.4rem;
+				width: 10rem;
+				background-color: var(--c-warning-600);
+			}
+		}
+	}
+}
